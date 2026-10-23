@@ -4,6 +4,8 @@
 
 This OCaml project implements an interpreter for a custom-defined programming language. The interpreter supports various data types, control flow structures, function definitions, and a custom dictionary data structure. A key feature of this interpreter is its ability to evaluate expressions under both **static** and **dynamic** scoping rules.
 
+[Read the report](REPORT.pdf) · [Features](#features) · [Usage examples](#usage-examples)
+
 ## Features
 
 * **Abstract Syntax Tree (AST)**: Defines the structure of the language's expressions using OCaml data types.
@@ -32,7 +34,7 @@ This OCaml project implements an interpreter for a custom-defined programming la
 
 ## Project Structure
 
-The core logic of the interpreter is contained within a single OCaml file, likely `interpreter.ml` or similar. It defines:
+The core logic of the interpreter is contained within a single OCaml file, [`OCAML-interpreter.ml`](OCAML-interpreter.ml). It defines:
 
 * `ide`: Type for identifiers (strings).
 * `exp`: The abstract syntax tree (AST) for expressions.
@@ -80,3 +82,10 @@ To run these tests, you would call `eval` or `rt_eval` with the corresponding ex
 
 # eval e8 emptyEnv;; (* Static Scoping *)
 - : evT = Int 1
+```
+
+---
+
+## Report
+
+[`REPORT.pdf`](REPORT.pdf) is the full 9-page report, in English. It describes the abstract syntax, the run-time support (values, environments and dynamic type checking), the two interpreters for static and dynamic scoping, the dictionary operations and the tests: every test expression was run with both interpreters, together with further checks of recursion, error handling and scoping inside dictionary operations.
